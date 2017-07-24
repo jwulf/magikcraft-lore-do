@@ -28,3 +28,7 @@ export const Do = function Do(iterations: number){
     }
 }
 
+export const spells = {
+    _default: Do
+};
+

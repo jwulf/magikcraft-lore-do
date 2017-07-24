@@ -1,9 +1,20 @@
 const Do = require('./index').Do;
+const Module = require('./index');
+
 global.magikcraft = {
     io: {
         setTimeout
     }
 }
+
+describe('Module', function() {
+    test('Exports a spells object', () => {
+        expect(Module.spells).toBeTruthy();
+    });
+    test('Exports spells._default', () => {
+        expect(Module.spells._default).toBeTruthy();
+    });
+});
 
 describe('Do method', function () {
     test('Do function works', done => {
