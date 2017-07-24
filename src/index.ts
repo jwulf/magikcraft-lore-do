@@ -1,20 +1,20 @@
 
 //Do (10).times(function () {//something}).withDelay(1000).start();
 
-export const Do = function Do(iterations: number){
+export const Do = function Do(iterations: number) {
     return {
         times: function (fn: (iteration?: number) => any) {
             return {
                 withDelay: function (delay: number) {
                     return {
-                        start: function (callback? : (n: number)=> void) {
+                        now: function (done?: (n: number) => void) {
                             // Set up the iterations, with delay
                             for (let n = 0; n < iterations; n++) {
                                 const _fn = (n === iterations - 1) ?
-                                    function (){
+                                    function () {
                                         fn(iterations - 1);
-                                        if (typeof callback !== "undefined") {
-                                            callback(iterations - 1);
+                                        if (typeof done !== "undefined") {
+                                            done(iterations - 1);
                                         }
                                     } :
                                     () => fn(n)
@@ -22,6 +22,14 @@ export const Do = function Do(iterations: number){
                             }
                         }
                     }
+                },
+                now: function (done?: (n: number) => void) {
+                    // Set up the iterations, with delay
+                    let n;
+                    for (n = 0; n < iterations; n++) {
+                        fn(n)
+                    }
+                    if (done) done(n - 1);
                 }
             }
         }
