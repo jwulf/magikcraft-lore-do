@@ -30,3 +30,6 @@ exports.Do = function Do(iterations) {
         }
     };
 };
+exports.spells = {
+    _default: exports.Do
+};

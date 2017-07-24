@@ -4,7 +4,8 @@
   "description": "Iterators, the way the Gods intended",
   "main": "dst/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "precommit": "tsc -p tsconfig.json --declaration"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
   "homepage": "https://github.com/jwulf/magikcraft-lore-do#readme",
   "devDependencies": {
     "@types/jest": "^20.0.4",
+    "husky": "^0.14.3",
     "jest": "^20.0.4",
     "magikcraft.io": "^0.9.10",
     "ts-jest": "^20.0.7",
