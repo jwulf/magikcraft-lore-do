@@ -7,13 +7,13 @@ exports.Do = function Do(iterations) {
             return {
                 withDelay: function (delay) {
                     return {
-                        start: function (callback) {
+                        now: function (done) {
                             var _loop_1 = function (n) {
                                 var _fn = (n === iterations - 1) ?
                                     function () {
                                         fn(iterations - 1);
-                                        if (typeof callback !== "undefined") {
-                                            callback(iterations - 1);
+                                        if (typeof done !== "undefined") {
+                                            done(iterations - 1);
                                         }
                                     } :
                                     function () { return fn(n); };
@@ -25,6 +25,15 @@ exports.Do = function Do(iterations) {
                             }
                         }
                     };
+                },
+                now: function (done) {
+                    // Set up the iterations, with delay
+                    var n;
+                    for (n = 0; n < iterations; n++) {
+                        fn(n);
+                    }
+                    if (done)
+                        done(n - 1);
                 }
             };
         }
