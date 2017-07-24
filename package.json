@@ -1,0 +1,43 @@
+{
+  "name": "magikcraft-lore-do",
+  "version": "1.0.0",
+  "description": "Iterators, the way the Gods intended",
+  "main": "dst/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwulf/magikcraft-lore-do.git"
+  },
+  "keywords": [
+    "magikcraft",
+    "minecraft",
+    "lore",
+    "javascript"
+  ],
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "author": "The Legendary Josh Wulf (TM)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwulf/magikcraft-lore-do/issues"
+  },
+  "homepage": "https://github.com/jwulf/magikcraft-lore-do#readme",
+  "devDependencies": {
+    "@types/jest": "^20.0.4",
+    "jest": "^20.0.4",
+    "magikcraft.io": "^0.9.10",
+    "ts-jest": "^20.0.7",
+    "typescript": "2.4"
+  }
+}
