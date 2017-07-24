@@ -5,7 +5,7 @@
   "main": "dst/index.js",
   "scripts": {
     "test": "jest",
-    "precommit": "husky"
+    "precommit": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
