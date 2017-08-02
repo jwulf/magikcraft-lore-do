@@ -1,5 +1,5 @@
 
-//Do (10).times(function () {//something}).withDelay(1000).start();
+//Do (10).times(function () {//something}).withDelay(1000).now();
 
 export const Do = function Do(iterations: number) {
     return {
@@ -36,7 +36,18 @@ export const Do = function Do(iterations: number) {
     }
 }
 
+
 export const spells = {
-    _default: Do
+    _default: Do,
 };
+
+export const _lore = {
+    namespace: 'sitapati',
+    loreToLoad: [
+        {
+            'Do': Do,
+            cost: 0
+        }
+    ]
+}
 
