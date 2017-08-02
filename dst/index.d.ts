@@ -16,3 +16,17 @@ export declare const spells: {
         };
     };
 };
+export declare const _lore: {
+    namespace: string;
+    loreToLoad: {
+        'Do': (iterations: number) => {
+            times: (fn: (iteration?: number | undefined) => any) => {
+                withDelay: (delay: number) => {
+                    now: (done?: ((n: number) => void) | undefined) => void;
+                };
+                now: (done?: ((n: number) => void) | undefined) => void;
+            };
+        };
+        cost: number;
+    }[];
+};

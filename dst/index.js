@@ -1,5 +1,5 @@
 "use strict";
-//Do (10).times(function () {//something}).withDelay(1000).start();
+//Do (10).times(function () {//something}).withDelay(1000).now();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Do = function Do(iterations) {
     return {
@@ -40,5 +40,14 @@ exports.Do = function Do(iterations) {
     };
 };
 exports.spells = {
-    _default: exports.Do
+    _default: exports.Do,
+};
+exports._lore = {
+    namespace: 'sitapati',
+    loreToLoad: [
+        {
+            'Do': exports.Do,
+            cost: 0
+        }
+    ]
 };
