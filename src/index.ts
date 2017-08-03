@@ -46,7 +46,7 @@ export const _lore = {
     loreToLoad: [
         {
             name: 'Do',
-            code: Do,
+            code: () => Do,
             cost: 0
         }
     ]

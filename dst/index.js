@@ -47,7 +47,7 @@ exports._lore = {
     loreToLoad: [
         {
             name: 'Do',
-            code: exports.Do,
+            code: function () { return exports.Do; },
             cost: 0
         }
     ]
