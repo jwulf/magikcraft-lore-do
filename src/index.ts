@@ -45,7 +45,8 @@ export const _lore = {
     namespace: 'sitapati',
     loreToLoad: [
         {
-            'Do': Do,
+            name: 'Do',
+            code: Do,
             cost: 0
         }
     ]

@@ -46,7 +46,8 @@ exports._lore = {
     namespace: 'sitapati',
     loreToLoad: [
         {
-            'Do': exports.Do,
+            name: 'Do',
+            code: exports.Do,
             cost: 0
         }
     ]

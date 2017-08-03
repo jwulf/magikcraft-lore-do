@@ -1,6 +1,6 @@
 {
   "name": "magikcraft-lore-do",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Iterators, the way the Gods intended",
   "main": "dst/index.js",
   "scripts": {
